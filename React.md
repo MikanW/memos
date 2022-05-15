@@ -89,7 +89,24 @@ const [state, setState] = useState(initialState)
 setState(newState)
 state変わった時点でコンポーネント再描画が行う
 
+### {}で変数を渡す
+
+```
+function MyComponent ({attr1, attr2, attr3}) {
+    //変数を扱う
+}
+```
+{}の中で、propsの属性名を使って、必要な属性だけを受け取る
+属性の名前を変更しないこと！
+
 ### propsへ関数を渡す
 渡す時実行しないように
 * onClick={funcName}
 * onClick={()=>funcName()}
+
+
+### 条件付きrender
+例：
+`{props.setup && <h3>Setup: {props.setup}</h3>}`
+
+setup属性が存在する場合のみ、＆＆の右側のエレメントをrenderする
