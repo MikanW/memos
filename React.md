@@ -110,3 +110,17 @@ function MyComponent ({attr1, attr2, attr3}) {
 `{props.setup && <h3>Setup: {props.setup}</h3>}`
 
 setup属性が存在する場合のみ、＆＆の右側のエレメントをrenderする
+
+### map render
+
+`Array.map(function(item){return newItem})`
+
+mapの入力引数はコールバック関数である
+その関数の入力引数は、arrayのitem
+戻り値は、map後の新しいarrayに、itemと同じ位置にあるnewItemになります
+
+mapを使って、arrayデータをコンポーネントに転換する。
+それから{array}を使って、コンポーネントのarrayをrenderする。
+
+mapでデータをフォーマットする時、
+ユニークな属性（idなど）を一つkey属性として指定する必要がある。
