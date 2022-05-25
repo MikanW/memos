@@ -135,3 +135,10 @@ mapを使って、arrayデータをコンポーネントに転換する。
 
 mapでデータをフォーマットする時、
 ユニークな属性（idなど）を一つkey属性として指定する必要がある。
+
+### props和state最根本的区别
+创建component并传入props时，
+我们期望props是不会在component内部被偷偷修改的，
+期望component会是props所指定的式样。
+所以对于component，props是不变的部分，是创建component时的“配置”，
+而component创建出来后，再发生变化的部分，要用state去实现。
